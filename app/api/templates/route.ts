@@ -9,6 +9,7 @@ export async function GET() {
     });
     return NextResponse.json({ success: true, data: templates });
   } catch (error) {
+    console.error('[GET /api/templates]', error);
     return NextResponse.json({ success: false, error: 'Failed to fetch templates' }, { status: 500 });
   }
 }
@@ -23,6 +24,7 @@ export async function POST(req: Request) {
     const template = await prisma.template.create({ data: parsed.data });
     return NextResponse.json({ success: true, data: template }, { status: 201 });
   } catch (error) {
+    console.error('[POST /api/templates]', error);
     return NextResponse.json({ success: false, error: 'Failed to create template' }, { status: 500 });
   }
 }
