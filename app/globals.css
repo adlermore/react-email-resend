@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* Font variables from Next.js (must use @theme inline to reference CSS vars) */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-syne);
+  --font-sans:    var(--font-dm-sans);
+  --font-mono:    var(--font-jb-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Design tokens — Swiss/International Typographic */
+@theme {
+  /* Canvas */
+  --color-canvas:       #F7F6F2;
+  --color-card:         #FFFFFF;
+
+  /* Sidebar rail */
+  --color-rail:         #0D0D0D;
+
+  /* Ink / text */
+  --color-ink:          #0D0D0D;
+  --color-ink-muted:    #737373;
+  --color-ink-faint:    #B0ADA8;
+  --color-ink-inverse:  #F2F0EA;
+
+  /* Brand accent */
+  --color-brand:        #D4380D;
+
+  /* Rules / borders */
+  --color-rule:         #E2E0DA;
+
+  /* Status */
+  --color-success:      #15803D;
+  --color-danger:       #DC2626;
+}
+
+/* ─── Base ─────────────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-rule);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink-faint);
 }

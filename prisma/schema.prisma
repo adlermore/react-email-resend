@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Template {
+  id          String   @id @default(cuid())
+  name        String
+  subject     String   @default("")
+  category    String   @default("general")
+  description String   @default("")
+  code        String
+  html        String?
+  variables   String   @default("[]")
+  thumbnail   String?
+  sendCount   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model SendLog {
+  id         String   @id @default(cuid())
+  templateId String
+  to         String
+  subject    String
+  status     String
+  error      String?
+  sentAt     DateTime @default(now())
+}

@@ -1,0 +1,93 @@
+/* MailCraft Design Tokens — Swiss/International Typographic
+   Generated for: .design/mailcraft-redesign/DESIGN_BRIEF.md
+   Philosophy: Swiss / International Typographic
+   Stack: Tailwind CSS 4.x (@theme directive)
+*/
+
+/* ─── Color Palette ─────────────────────────────────────────── */
+
+/* Canvas / Page */
+--color-canvas:       #F7F6F2;   /* Warm off-white — paper quality */
+--color-card:         #FFFFFF;   /* Pure white for surfaces */
+
+/* Rail / Sidebar */
+--color-rail:         #0D0D0D;   /* Near-black sidebar */
+
+/* Ink / Typography */
+--color-ink:          #0D0D0D;   /* Primary text — near-black */
+--color-ink-muted:    #737373;   /* Secondary text — mid-gray */
+--color-ink-faint:    #B0ADA8;   /* Tertiary text — warm gray */
+--color-ink-inverse:  #F2F0EA;   /* Text on dark backgrounds */
+
+/* Brand / Accent */
+--color-brand:        #D4380D;   /* Tomato red — Swiss editorial */
+
+/* Rules / Borders */
+--color-rule:         #E2E0DA;   /* Light border — warm rule */
+
+/* Status */
+--color-success:      #15803D;
+--color-danger:       #DC2626;
+
+/* ─── Typography ────────────────────────────────────────────── */
+
+--font-display:  'Syne', sans-serif;          /* Bold display headings */
+--font-sans:     'DM Sans', system-ui, sans-serif;  /* UI body text */
+--font-mono:     'JetBrains Mono', monospace; /* Code, labels */
+
+/* Type scale (8px base) */
+--text-2xs:   0.625rem;    /* 10px — metadata, mono labels */
+--text-xs:    0.75rem;     /* 12px — small UI text */
+--text-sm:    0.875rem;    /* 14px — body text */
+--text-base:  1rem;        /* 16px — default */
+--text-lg:    1.125rem;    /* 18px */
+--text-xl:    1.25rem;     /* 20px */
+--text-2xl:   1.5rem;      /* 24px */
+--text-3xl:   1.875rem;    /* 30px — page headings */
+--text-4xl:   2.25rem;     /* 36px — hero display */
+
+/* ─── Spacing (8px base) ───────────────────────────────────── */
+
+--space-1:   0.25rem;   /* 4px */
+--space-2:   0.5rem;    /* 8px */
+--space-3:   0.75rem;   /* 12px */
+--space-4:   1rem;      /* 16px */
+--space-5:   1.25rem;   /* 20px */
+--space-6:   1.5rem;    /* 24px */
+--space-8:   2rem;      /* 32px */
+--space-10:  2.5rem;    /* 40px */
+--space-12:  3rem;      /* 48px */
+--space-16:  4rem;      /* 64px */
+
+/* ─── Layout ────────────────────────────────────────────────── */
+
+--sidebar-width:      13rem;    /* 208px */
+--header-height:      3rem;     /* 48px */
+--max-width-content:  80rem;    /* 1280px */
+--max-width-form:     40rem;    /* 640px */
+
+/* ─── Border Radius ─────────────────────────────────────────── */
+/* Swiss style: minimal, near-zero rounding */
+--radius-none:  0px;
+--radius-sm:    2px;
+--radius-md:    3px;
+
+/* ─── Motion ─────────────────────────────────────────────────── */
+
+--duration-fast:    100ms;
+--duration-normal:  150ms;
+--easing-default:   cubic-bezier(0.4, 0, 0.2, 1);
+
+/* ─── Dark mode ─────────────────────────────────────────────── */
+/* Intentionally warm dark, not a simple inversion */
+[data-theme="dark"] {
+  --color-canvas:      #0F0D0B;
+  --color-card:        #1A1714;
+  --color-rail:        #080706;
+  --color-ink:         #EEE9E0;
+  --color-ink-muted:   #9B9790;
+  --color-ink-faint:   #5A5752;
+  --color-ink-inverse: #EEE9E0;
+  --color-rule:        #2A2724;
+  --color-brand:       #E8461A;
+}
